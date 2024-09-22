@@ -1,0 +1,15 @@
+.prettierrc
+
+/node_modules
+
+/styles
+
+input.css
+
+package-lock.json
+
+package.json
+
+readme.md
+
+tailwind.config.js
