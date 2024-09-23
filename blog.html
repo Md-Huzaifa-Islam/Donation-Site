@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment -05</title>
+    <!-- font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lex: ["Lexend", "sans-serif"],
+            },
+            colors: {
+              btn1: "#B4F461",
+              pr: "#111111",
+              second: "#111111B2",
+              placeholder: "#11111166",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- daisy CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="relative min-h-screen pb-64 font-lex">
+    <header class="grid gap-20">
+      <!-- nav bar section  -->
+      <nav
+        class="flex items-center justify-between bg-[#F9F7F3] px-5 pb-16 pt-6"
+      >
+        <a href="./index.html"
+          ><button class="btn bg-btn1 text-xl font-semibold text-pr">
+            Home
+          </button></a
+        >
+        <div class="flex items-center gap-4">
+          <div class="">
+            <img src="./assets/logo.png" class="w-full" alt="" />
+          </div>
+          <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="">
+            <img src="./assets/coin.png" alt="" class="w-full" />
+          </div>
+          <p class="text-xl font-medium text-second">5500 BDT</p>
+        </div>
+      </nav>
+      <!-- options -->
+      <div class="flex items-center justify-center gap-4">
+        <button class="btn bg-btn1 text-xl font-semibold text-pr">
+          Donation</button
+        ><button
+          class="btn rounded-lg border border-solid border-[#1111114D] text-xl font-medium text-second"
+        >
+          History
+        </button>
+      </div>
+    </header>
+
+    <section class="mx-auto max-w-[1140px] pt-8">
+      <div
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold text-pr">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content font-light text-second">
+          <p>
+            The Document Object Model (DOM) is a programming interface for web
+            documents. It represents the structure of an HTML or XML document as
+            a tree of objects, allowing scripts to dynamically access,
+            manipulate, and modify its content, structure, and styles. Each
+            element, attribute, and text is represented as a node in this tree.
+            DOM enables interaction between JavaScript and the webpage's
+            elements.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold text-pr">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content font-light text-second">
+          <p>
+            To select elements from the DOM, you can use several JavaScript
+            methods. The `document.getElementById("id")` method selects a single
+            element based on its unique `id` attribute. Another option is
+            `document.querySelector("selector")`, which selects the first
+            element that matches a given CSS selector, while
+            `document.querySelectorAll("selector")` selects all matching
+            elements and returns a static NodeList. For selecting elements by
+            class name, `document.getElementsByClassName("className")` returns a
+            live HTMLCollection of all elements with the specified class.
+            Similarly, `document.getElementsByTagName("tagName")` selects all
+            elements of a given tag, such as `div` or `p`. Additionally, the
+            `element.children` property retrieves all direct child elements of a
+            specified parent element, allowing for easier navigation within the
+            DOM hierarchy.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold text-pr">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content font-light text-second">
+          <p>
+            Event delegation is a technique in the DOM where a single event
+            listener on a parent element handles events from its child elements.
+            This works through event bubbling, where events propagate up to the
+            parent. It’s useful because it improves performance by reducing the
+            number of event listeners and simplifies management, especially with
+            dynamically added elements. Instead of attaching listeners to each
+            child, the parent’s listener can manage all relevant child events
+            efficiently.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold text-pr">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content font-light text-second">
+          <p>
+            You can manipulate an element's attributes and styles using the DOM
+            with JavaScript in several ways. To modify an attribute, you can use
+            the `setAttribute()` method to change or add an attribute, while
+            `getAttribute()` retrieves its value. For instance,
+            `element.setAttribute("src", "image.jpg")` sets the `src` attribute
+            of an image element, and `const value = element.getAttribute("src")`
+            retrieves it. To remove an attribute, you can use the
+            `removeAttribute()` method, such as
+            `element.removeAttribute("class")`, which removes the class
+            attribute entirely. Many attributes can also be accessed directly
+            via their properties; for example, `element.id = "newID"` sets the
+            `id` property. When it comes to styling, the `style` property allows
+            you to modify inline CSS styles, such as `element.style.color =
+            "red"` to change the text color. Additionally, you can use the
+            `classList` property to manage CSS classes, allowing you to add
+            classes with `element.classList.add("active")`, remove them with
+            `element.classList.remove("hidden")`, or toggle them with
+            `element.classList.toggle("highlight")`. This versatility enables
+            dynamic and responsive changes to the webpage's elements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="absolute bottom-0 h-36 w-full bg-[#F9F7F3]"></footer>
+    <!-- Javascript files  -->
+  </body>
+</html>

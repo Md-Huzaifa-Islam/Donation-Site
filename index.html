@@ -37,13 +37,17 @@
       type="text/css"
     />
   </head>
-  <body class="font-lex">
+  <body class="relative min-h-screen pb-64 font-lex">
     <header class="grid gap-20">
       <!-- nav bar section  -->
       <nav
         class="flex items-center justify-between bg-[#F9F7F3] px-5 pb-16 pt-6"
       >
-        <button class="btn bg-btn1 text-xl font-semibold text-pr">Blog</button>
+        <a href="./blog.html"
+          ><button class="btn bg-btn1 text-xl font-semibold text-pr">
+            Blog
+          </button></a
+        >
         <div class="flex items-center gap-4">
           <div class="">
             <img src="./assets/logo.png" class="w-full" alt="" />
@@ -69,7 +73,7 @@
       </div>
     </header>
 
-    <main class="mx-auto flex max-w-[1140px] flex-col gap-8 pb-20 pt-8">
+    <main class="mx-auto flex max-w-[1140px] flex-col gap-8 pt-8">
       <!-- Donation for Noakhali section  -->
       <section
         class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8"
@@ -198,7 +202,23 @@
       </section>
     </main>
 
-    <footer class="h-36 w-full bg-[#F9F7F3]"></footer>
+    <!-- History page  -->
+    <section class="mx-auto mt-8 hidden max-w-[1140px]">
+      <ul class="flex w-full flex-col gap-6">
+        <li
+          class="space-y-4 rounded-2xl border border-solid border-[#1111111A] p-8"
+        >
+          <p class="text-xl font-bold text-pr">
+            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+          </p>
+          <p class="font-light text-second">
+            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="absolute bottom-0 h-36 w-full bg-[#F9F7F3]"></footer>
     <!-- Javascript files  -->
   </body>
 </html>
