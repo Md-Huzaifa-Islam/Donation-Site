@@ -1,11 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment -05</title>
+    <!-- font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lex: ["Lexend", "sans-serif"],
+            },
+            colors: {
+              btn1: "#B4F461",
+              pr: "#111111",
+              second: "#111111B2",
+              placeholder: "#11111166",
+            },
+          },
+        },
+      };
+    </script>
     <!-- daisy CDN  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -13,7 +37,38 @@
       type="text/css"
     />
   </head>
-  <body>
+  <body class="font-lex">
+    <header class="grid gap-20 md:container md:mx-auto">
+      <!-- nav bar section  -->
+      <nav
+        class="flex items-center justify-between bg-[#F9F7F3] px-5 pb-16 pt-6"
+      >
+        <button class="btn text-pr bg-btn1 text-xl font-semibold">Blog</button>
+        <div class="flex items-center gap-4">
+          <div class="">
+            <img src="./assets/logo.png" class="w-full" alt="" />
+          </div>
+          <p class="text-pr text-xl font-semibold">Donate Bangladesh</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="">
+            <img src="./assets/coin.png" alt="" class="w-full" />
+          </div>
+          <p class="text-second text-xl font-medium">5500 BDT</p>
+        </div>
+      </nav>
+      <!-- options -->
+      <div class="flex items-center justify-center gap-4">
+        <button class="btn bg-btn1 text-pr text-xl font-semibold">
+          Donation</button
+        ><button
+          class="btn text-second rounded-lg border border-solid border-[#1111114D] text-xl font-medium"
+        >
+          History
+        </button>
+      </div>
+    </header>
+
     <!-- Javascript files  -->
   </body>
 </html>
