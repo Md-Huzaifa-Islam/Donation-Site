@@ -50,17 +50,22 @@
             Blog
           </button></a
         >
-        <div class="flex items-center gap-4">
-          <div class="">
-            <img src="./assets/logo.png" class="w-full" alt="" />
-          </div>
-          <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
-        </div>
+        <a href="#"
+          ><div class="flex items-center gap-4">
+            <div class="">
+              <img src="./assets/logo.png" class="w-full" alt="" />
+            </div>
+            <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
+          </div></a
+        >
         <div class="flex items-center gap-3">
           <div class="">
             <img src="./assets/coin.png" alt="" class="w-full" />
           </div>
-          <p class="text-xl font-medium text-second">5500 BDT</p>
+          <div class="flex gap-2 text-xl font-medium text-second">
+            <p id="mainBalance">5500</p>
+            <p>BDT</p>
+          </div>
         </div>
       </nav>
       <!-- options -->
@@ -91,7 +96,9 @@
             <div class="">
               <img src="./assets/coin.png" class="w-full" alt="" />
             </div>
-            <p class="text-base font-normal text-second">0 BDT</p>
+            <p class="text-base font-normal text-second" id="givenNoakhali">
+              0 BDT
+            </p>
           </div>
           <p class="text-xl font-bold text-pr">
             Donate for Flood at Noakhali, Bangladesh
@@ -108,10 +115,14 @@
             <input
               type="text"
               placeholder="Write Donation Amount"
+              id="noakhaliInput"
               class="rounded-lg border border-solid border-[#1111111a] py-4 pl-4 placeholder:text-base placeholder:font-light placeholder:text-[#11111166] focus:outline-btn1"
             />
           </div>
-          <button class="btn btn-block bg-btn1 text-xl font-semibold text-pr">
+          <button
+            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            id="donateNoakhali"
+          >
             Donate Now
           </button>
         </div>
@@ -211,18 +222,7 @@
 
     <!-- History page  -->
     <section id="historyPage" class="mx-auto mt-8 hidden max-w-[1140px]">
-      <ul class="flex w-full flex-col gap-6">
-        <li
-          class="space-y-4 rounded-2xl border border-solid border-[#1111111A] p-8"
-        >
-          <p class="text-xl font-bold text-pr">
-            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-          </p>
-          <p class="font-light text-second">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </li>
-      </ul>
+      <ul class="flex w-full flex-col gap-6" id="listOfHistory"></ul>
     </section>
 
     <footer class="absolute bottom-0 h-36 w-full bg-[#F9F7F3]"></footer>

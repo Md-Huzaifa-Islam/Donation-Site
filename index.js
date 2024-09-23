@@ -1,6 +1,7 @@
 // default
 selectedBtn("donate");
 normalBtn("history");
+let mainBalance = parseFloat(getById("mainBalance").innerText);
 
 // making history button work
 function showHistory() {
@@ -19,5 +20,22 @@ function showDonation() {
   getById("historyPage").classList.add("hidden");
   getById("donatePage").classList.remove("hidden");
 }
-
 getById("donate").addEventListener("click", showDonation);
+
+// noakhali donation section
+function donateNoakhali() {
+  const donate = inputToNum("noakhaliInput");
+  getById("noakhaliInput").value = "";
+  if (donate === false) {
+    return;
+  } else if (donate > mainBalance) {
+    alert("Invalid input");
+  } else {
+    getById("givenNoakhali").innerHTML = `${donate} BDT`;
+    mainBalance -= donate;
+    getById("mainBalance").innerHTML = mainBalance;
+    makeHistory(donate, "Taka is Donated for famine-2024 at Feni, Bangladesh");
+  }
+}
+
+getById("donateNoakhali").addEventListener("click", donateNoakhali);
