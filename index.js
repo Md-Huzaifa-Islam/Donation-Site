@@ -35,6 +35,8 @@ function donateNoakhali() {
     mainBalance -= donate;
     getById("mainBalance").innerHTML = mainBalance;
     makeHistory(donate, "Taka is Donated for famine-2024 at Feni, Bangladesh");
+    // my_modal_1.showModal();
+    my_modal_5.showModal();
   }
 }
 

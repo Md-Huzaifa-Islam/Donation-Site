@@ -76,6 +76,24 @@
       <hr class="border border-solid border-[#1111111A]" />
     </header>
 
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box flex flex-col items-center gap-6">
+        <p class="text-3xl font-extrabold">Congrates!</p>
+        <div class="w-11">
+          <img src="./assets/coin.png" alt="" class="w-full" />
+        </div>
+        <div class="space-y-3 text-center">
+          <p class="text-second">You Have Donated for Humankind</p>
+          <p class="text-xl font-bold">Successfully</p>
+        </div>
+        <div class="modal-action mt-0">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <main
       id="donatePage"
       class="mx-auto flex max-w-[1140px] flex-col gap-8 pt-8"
