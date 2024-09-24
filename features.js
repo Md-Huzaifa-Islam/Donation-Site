@@ -46,12 +46,13 @@ function inputToNum(id) {
   if (isNum(value)) {
     let temp = parseFloat(value);
     if (temp <= 0) {
-      alert("the input amount is invalid");
+      alert("Invalid Donation Amount");
+      return false;
     } else {
       return temp;
     }
   } else {
-    alert("the input amount is invalid");
+    alert("Invalid Donation Amount");
     return false;
   }
 }
@@ -71,10 +72,9 @@ function makeHistory(amount, msg) {
   el1.innerText = `${amount} ${msg}`;
   el1.classList.add("text-xl", "font-bold", "text-pr");
   const el2 = document.createElement("p");
-  el2.innerText = `${date}`;
+  el2.innerText = `Date: ${date}`;
   el2.classList.add("font-light", "text-second");
   totalLi.appendChild(el1);
   totalLi.appendChild(el2);
   getById("listOfHistory").appendChild(totalLi);
-  console.log(totalLi);
 }

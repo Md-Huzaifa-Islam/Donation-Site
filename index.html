@@ -42,36 +42,38 @@
       class="sticky top-0 grid gap-6 bg-white bg-opacity-90 backdrop-blur-lg"
     >
       <!-- nav bar section  -->
-      <nav
-        class="flex items-center justify-between bg-[#F9F7F3] bg-opacity-50 px-5 pb-6 pt-5"
-      >
-        <a href="./blog.html"
-          ><button class="btn bg-btn1 text-xl font-semibold text-pr">
-            Blog
-          </button></a
+      <div class="bg-[#F9F7F3] bg-opacity-50">
+        <nav
+          class="flex items-center justify-between px-5 pb-6 pt-5 md:container md:mx-auto"
         >
-        <a href="#"
-          ><div class="flex items-center gap-4">
+          <a href="./blog.html"
+            ><button class="btn bg-btn1 px-8 text-xl font-semibold text-pr">
+              Blog
+            </button></a
+          >
+          <a href="#"
+            ><div class="flex items-center gap-4">
+              <div class="">
+                <img src="./assets/logo.png" class="w-full" alt="" />
+              </div>
+              <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
+            </div></a
+          >
+          <div class="flex items-center gap-3">
             <div class="">
-              <img src="./assets/logo.png" class="w-full" alt="" />
+              <img src="./assets/coin.png" alt="" class="w-full" />
             </div>
-            <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
-          </div></a
-        >
-        <div class="flex items-center gap-3">
-          <div class="">
-            <img src="./assets/coin.png" alt="" class="w-full" />
+            <div class="flex gap-2 text-xl font-medium text-second">
+              <p id="mainBalance">5500</p>
+              <p>BDT</p>
+            </div>
           </div>
-          <div class="flex gap-2 text-xl font-medium text-second">
-            <p id="mainBalance">5500</p>
-            <p>BDT</p>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <!-- options -->
       <div class="flex items-center justify-center gap-4">
-        <button class="btn" id="donate">Donation</button
-        ><button id="history" class="btn">History</button>
+        <button class="btn px-8" id="donate">Donation</button
+        ><button id="history" class="btn px-8">History</button>
       </div>
       <hr class="border border-solid border-[#1111111A]" />
     </header>
@@ -100,7 +102,7 @@
     >
       <!-- Donation for Noakhali section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8"
+        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
       >
         <!-- image part -->
         <div class="">
@@ -114,9 +116,12 @@
             <div class="">
               <img src="./assets/coin.png" class="w-full" alt="" />
             </div>
-            <p class="text-base font-normal text-second" id="givenNoakhali">
-              0 BDT
-            </p>
+            <div class="flex gap-1">
+              <p class="text-base font-normal text-second" id="givenNoakhali">
+                0
+              </p>
+              <p class="text-base font-normal text-second">BDT</p>
+            </div>
           </div>
           <p class="text-xl font-bold text-pr">
             Donate for Flood at Noakhali, Bangladesh
@@ -147,7 +152,7 @@
       </section>
       <!-- Donate for Flood Relief in Feni,Bangladesh section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8"
+        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
       >
         <!-- image part -->
         <div class="">
@@ -161,7 +166,10 @@
             <div class="">
               <img src="./assets/coin.png" class="w-full" alt="" />
             </div>
-            <p class="text-base font-normal text-second">0 BDT</p>
+            <div class="flex gap-1">
+              <p class="text-base font-normal text-second" id="givenFeni">0</p>
+              <p class="text-base font-normal text-second">BDT</p>
+            </div>
           </div>
           <p class="text-xl font-bold text-pr">
             Donate for Flood Relief in Feni,Bangladesh
@@ -180,17 +188,22 @@
             <input
               type="text"
               placeholder="Write Donation Amount"
+              id="feniInput"
               class="rounded-lg border border-solid border-[#1111111a] py-4 pl-4 placeholder:text-base placeholder:font-light placeholder:text-[#11111166] focus:outline-btn1"
             />
           </div>
-          <button class="btn btn-block bg-btn1 text-xl font-semibold text-pr">
+          <button
+            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            id="donateFeni"
+          >
             Donate Now
           </button>
         </div>
       </section>
-      <!-- Donation for Noakhali section  -->
+
+      <!-- Aid for Injured in the Quota Movement section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8"
+        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
       >
         <!-- image part -->
         <div class="">
@@ -208,7 +221,10 @@
             <div class="">
               <img src="./assets/coin.png" class="w-full" alt="" />
             </div>
-            <p class="text-base font-normal text-second">0 BDT</p>
+            <div class="flex gap-1">
+              <p class="text-base font-normal text-second" id="givenQuota">0</p>
+              <p class="text-base font-normal text-second">BDT</p>
+            </div>
           </div>
           <p class="text-xl font-bold text-pr">
             Aid for Injured in the Quota Movement
@@ -228,10 +244,14 @@
             <input
               type="text"
               placeholder="Write Donation Amount"
+              id="quotaInput"
               class="rounded-lg border border-solid border-[#1111111a] py-4 pl-4 placeholder:text-base placeholder:font-light placeholder:text-[#11111166] focus:outline-btn1"
             />
           </div>
-          <button class="btn btn-block bg-btn1 text-xl font-semibold text-pr">
+          <button
+            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            id="donateQuota"
+          >
             Donate Now
           </button>
         </div>
