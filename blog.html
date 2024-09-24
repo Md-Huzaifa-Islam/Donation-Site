@@ -37,33 +37,39 @@
       type="text/css"
     />
   </head>
-  <body class="relative min-h-screen pb-64 font-lex">
+  <body class="relative min-h-screen pb-32 font-lex md:pb-64">
     <header
-      class="sticky top-0 grid gap-6 bg-white bg-opacity-90 backdrop-blur-lg"
+      class="sticky top-0 grid gap-4 bg-white bg-opacity-90 backdrop-blur-lg md:gap-6"
     >
       <!-- nav bar section  -->
       <div class="bg-[#F9F7F3] bg-opacity-50">
         <nav
-          class="flex items-center justify-between px-5 pb-6 pt-5 md:container md:mx-auto"
+          class="flex items-center justify-between px-5 pb-5 pt-4 md:container md:mx-auto md:pb-6 md:pt-5"
         >
           <a href="./index.html"
-            ><button class="btn bg-btn1 px-8 text-xl font-semibold text-pr">
+            ><button
+              class="btn bg-btn1 px-5 text-lg font-medium text-pr md:px-8 md:text-xl md:font-semibold"
+            >
               Home
             </button></a
           >
           <a href="#"
             ><div class="flex items-center gap-4">
-              <div class="">
+              <div class="w-12 md:w-auto">
                 <img src="./assets/logo.png" class="w-full" alt="" />
               </div>
-              <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
+              <p class="hidden text-xl font-semibold text-pr md:block">
+                Donate Bangladesh
+              </p>
             </div></a
           >
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-[6px] md:gap-3">
             <div class="">
               <img src="./assets/coin.png" alt="" class="w-full" />
             </div>
-            <div class="flex gap-2 text-xl font-medium text-second">
+            <div
+              class="flex gap-[2px] text-xl font-medium text-second md:gap-2"
+            >
               <p id="mainBalance">5500</p>
               <p>BDT</p>
             </div>
@@ -73,16 +79,26 @@
       <!-- options -->
     </header>
 
-    <section class="mx-auto flex max-w-[1140px] flex-col gap-6 pt-16">
-      <p class="pb-4 text-center text-4xl font-bold">Important FAQ</p>
+    <section
+      class="mx-auto flex max-w-[1140px] flex-col gap-6 px-5 pt-16 md:px-0"
+    >
+      <p
+        class="pb-2 text-center text-3xl font-semibold md:pb-4 md:text-4xl md:font-bold"
+      >
+        Important FAQ
+      </p>
       <div
-        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-4 md:p-8"
       >
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-bold text-pr">
+        <div
+          class="collapse-title text-lg font-semibold text-pr md:text-xl md:font-bold"
+        >
           What is the Document Object Model (DOM)?
         </div>
-        <div class="collapse-content font-light text-second">
+        <div
+          class="collapse-content text-sm font-light text-second md:text-base"
+        >
           <p>
             The Document Object Model (DOM) is a programming interface for web
             documents. It represents the structure of an HTML or XML document as
@@ -95,13 +111,17 @@
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-4 md:p-8"
       >
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-bold text-pr">
+        <div
+          class="collapse-title text-lg font-semibold text-pr md:text-xl md:font-bold"
+        >
           How do you select an element from the DOM?
         </div>
-        <div class="collapse-content font-light text-second">
+        <div
+          class="collapse-content text-sm font-light text-second md:text-base"
+        >
           <p>
             To select elements from the DOM, you can use several JavaScript
             methods. The `document.getElementById("id")` method selects a single
@@ -121,14 +141,18 @@
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-4 md:p-8"
       >
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-bold text-pr">
+        <div
+          class="collapse-title text-lg font-semibold text-pr md:text-xl md:font-bold"
+        >
           What is event delegation in the context of the DOM, and why is it
           useful?
         </div>
-        <div class="collapse-content font-light text-second">
+        <div
+          class="collapse-content text-sm font-light text-second md:text-base"
+        >
           <p>
             Event delegation is a technique in the DOM where a single event
             listener on a parent element handles events from its child elements.
@@ -142,14 +166,18 @@
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-8"
+        class="collapse-arrow collapse border border-solid border-[#1111111A] bg-transparent p-4 md:p-8"
       >
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-bold text-pr">
+        <div
+          class="collapse-title text-lg font-semibold text-pr md:text-xl md:font-bold"
+        >
           How do you manipulate an element's attributes and styles using the
           DOM?
         </div>
-        <div class="collapse-content font-light text-second">
+        <div
+          class="collapse-content text-sm font-light text-second md:text-base"
+        >
           <p>
             You can manipulate an element's attributes and styles using the DOM
             with JavaScript in several ways. To modify an attribute, you can use
@@ -175,7 +203,7 @@
       </div>
     </section>
 
-    <footer class="absolute bottom-0 h-36 w-full bg-[#F9F7F3]"></footer>
+    <footer class="absolute bottom-0 h-20 w-full bg-[#F9F7F3] md:h-36"></footer>
     <!-- Javascript files  -->
   </body>
 </html>

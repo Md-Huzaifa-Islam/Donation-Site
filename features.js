@@ -5,8 +5,10 @@ function getById(id) {
 function normalBtn(id) {
   getById(id).classList.remove(
     "bg-btn1",
-    "text-xl",
-    "font-semibold",
+    "md:text-xl",
+    "text-lg",
+    "font-medium",
+    "md:font-semibold",
     "text-pr",
   );
   getById(id).classList.add(
@@ -14,8 +16,10 @@ function normalBtn(id) {
     "border",
     "border-solid",
     "border-[#1111114D]",
-    "text-xl",
-    "font-medium",
+    "md:text-xl",
+    "text-lg",
+    "md:font-medium",
+    "font-normal",
     "text-second",
   );
 }
@@ -26,11 +30,20 @@ function selectedBtn(id) {
     "border",
     "border-solid",
     "border-[#1111114D]",
-    "text-xl",
-    "font-medium",
+    "md:text-xl",
+    "text-lg",
+    "md:font-medium",
+    "font-normal",
     "text-second",
   );
-  getById(id).classList.add("bg-btn1", "text-xl", "font-semibold", "text-pr");
+  getById(id).classList.add(
+    "bg-btn1",
+    "md:text-xl",
+    "text-lg",
+    "font-medium",
+    "md:font-semibold",
+    "text-pr",
+  );
 }
 
 function isNum(value) {
@@ -61,19 +74,27 @@ function makeHistory(amount, msg) {
   const date = new Date();
   const totalLi = document.createElement("li");
   totalLi.classList.add(
-    "space-y-4",
+    "md:space-y-4",
+    "space-y-2",
     "rounded-2xl",
     "border",
     "border-solid",
     "border-[#1111111A]",
-    "p-8",
+    "md:p-8",
+    "p-5",
   );
   const el1 = document.createElement("p");
   el1.innerText = `${amount} ${msg}`;
-  el1.classList.add("text-xl", "font-bold", "text-pr");
+  el1.classList.add(
+    "md:text-xl",
+    "md:font-bold",
+    "text-pr",
+    "text-lg",
+    "font-semibold",
+  );
   const el2 = document.createElement("p");
   el2.innerText = `Date: ${date}`;
-  el2.classList.add("font-light", "text-second");
+  el2.classList.add("font-light", "text-second", "text-sm", "md:text-base");
   totalLi.appendChild(el1);
   totalLi.appendChild(el2);
   getById("listOfHistory").appendChild(totalLi);

@@ -37,33 +37,39 @@
       type="text/css"
     />
   </head>
-  <body class="relative min-h-screen pb-64 font-lex">
+  <body class="relative min-h-screen pb-32 font-lex md:pb-64">
     <header
-      class="sticky top-0 grid gap-6 bg-white bg-opacity-90 backdrop-blur-lg"
+      class="sticky top-0 grid gap-4 bg-white bg-opacity-90 backdrop-blur-lg md:gap-6"
     >
       <!-- nav bar section  -->
       <div class="bg-[#F9F7F3] bg-opacity-50">
         <nav
-          class="flex items-center justify-between px-5 pb-6 pt-5 md:container md:mx-auto"
+          class="flex items-center justify-between px-5 pb-5 pt-4 md:container md:mx-auto md:pb-6 md:pt-5"
         >
           <a href="./blog.html"
-            ><button class="btn bg-btn1 px-8 text-xl font-semibold text-pr">
+            ><button
+              class="btn bg-btn1 px-5 text-lg font-medium text-pr md:px-8 md:text-xl md:font-semibold"
+            >
               Blog
             </button></a
           >
           <a href="#"
             ><div class="flex items-center gap-4">
-              <div class="">
+              <div class="w-12 md:w-auto">
                 <img src="./assets/logo.png" class="w-full" alt="" />
               </div>
-              <p class="text-xl font-semibold text-pr">Donate Bangladesh</p>
+              <p class="hidden text-xl font-semibold text-pr md:block">
+                Donate Bangladesh
+              </p>
             </div></a
           >
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-[6px] md:gap-3">
             <div class="">
               <img src="./assets/coin.png" alt="" class="w-full" />
             </div>
-            <div class="flex gap-2 text-xl font-medium text-second">
+            <div
+              class="flex gap-[2px] text-xl font-medium text-second md:gap-2"
+            >
               <p id="mainBalance">5500</p>
               <p>BDT</p>
             </div>
@@ -72,8 +78,8 @@
       </div>
       <!-- options -->
       <div class="flex items-center justify-center gap-4">
-        <button class="btn px-8" id="donate">Donation</button
-        ><button id="history" class="btn px-8">History</button>
+        <button class="btn px-5 md:px-8" id="donate">Donation</button
+        ><button id="history" class="btn px-5 md:px-8">History</button>
       </div>
       <hr class="border border-solid border-[#1111111A]" />
     </header>
@@ -98,18 +104,18 @@
     </dialog>
     <main
       id="donatePage"
-      class="mx-auto flex max-w-[1140px] flex-col gap-8 pt-8"
+      class="mx-auto flex max-w-[1140px] flex-col gap-6 px-5 pt-8 md:gap-8 md:px-0"
     >
       <!-- Donation for Noakhali section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
+        class="grid items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-6 shadow-lg md:grid-cols-2 md:p-8"
       >
         <!-- image part -->
         <div class="">
           <img src="./assets/noakhali.png" class="w-full object-cover" alt="" />
         </div>
         <!-- side text part  -->
-        <div class="flex h-full flex-col justify-between">
+        <div class="flex h-full flex-col justify-between gap-3 md:gap-0">
           <div
             class="flex w-max items-center gap-2 rounded-lg bg-[#1111110D] px-4 py-[10px]"
           >
@@ -123,11 +129,11 @@
               <p class="text-base font-normal text-second">BDT</p>
             </div>
           </div>
-          <p class="text-xl font-bold text-pr">
+          <p class="text-lg font-semibold text-pr md:text-xl md:font-bold">
             Donate for Flood at Noakhali, Bangladesh
           </p>
-          <div class="flex flex-col gap-6">
-            <p class="text-base font-light text-second">
+          <div class="flex flex-col gap-3 md:gap-6">
+            <p class="text-sm font-light text-second md:text-base">
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -143,7 +149,7 @@
             />
           </div>
           <button
-            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            class="btn btn-block bg-btn1 text-lg font-medium text-pr md:text-xl md:font-semibold"
             id="donateNoakhali"
           >
             Donate Now
@@ -152,14 +158,14 @@
       </section>
       <!-- Donate for Flood Relief in Feni,Bangladesh section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
+        class="grid items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-6 shadow-lg md:grid-cols-2 md:p-8"
       >
         <!-- image part -->
         <div class="">
           <img src="./assets/feni.png" class="w-full object-cover" alt="" />
         </div>
         <!-- side text part  -->
-        <div class="flex h-full flex-col justify-between">
+        <div class="flex h-full flex-col justify-between gap-3 md:gap-0">
           <div
             class="flex w-max items-center gap-2 rounded-lg bg-[#1111110D] px-4 py-[10px]"
           >
@@ -171,11 +177,11 @@
               <p class="text-base font-normal text-second">BDT</p>
             </div>
           </div>
-          <p class="text-xl font-bold text-pr">
+          <p class="text-lg font-semibold text-pr md:text-xl md:font-bold">
             Donate for Flood Relief in Feni,Bangladesh
           </p>
-          <div class="flex flex-col gap-6">
-            <p class="text-base font-light text-second">
+          <div class="flex flex-col gap-3 md:gap-6">
+            <p class="text-sm font-light text-second md:text-base">
               The recent floods in Feni have devastated local communities,
               leading to severe disruption and loss. Your generous donation will
               help provide immediate aid, including food, clean water, and
@@ -193,7 +199,7 @@
             />
           </div>
           <button
-            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            class="btn btn-block bg-btn1 text-lg font-medium text-pr md:text-xl md:font-semibold"
             id="donateFeni"
           >
             Donate Now
@@ -203,7 +209,7 @@
 
       <!-- Aid for Injured in the Quota Movement section  -->
       <section
-        class="grid grid-cols-2 items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-8 shadow-lg"
+        class="grid items-center gap-8 rounded-2xl border border-solid border-[#1111111a] p-6 shadow-lg md:grid-cols-2 md:p-8"
       >
         <!-- image part -->
         <div class="">
@@ -214,7 +220,7 @@
           />
         </div>
         <!-- side text part  -->
-        <div class="flex h-full flex-col justify-between">
+        <div class="flex h-full flex-col justify-between gap-3 md:gap-0">
           <div
             class="flex w-max items-center gap-2 rounded-lg bg-[#1111110D] px-4 py-[10px]"
           >
@@ -226,11 +232,11 @@
               <p class="text-base font-normal text-second">BDT</p>
             </div>
           </div>
-          <p class="text-xl font-bold text-pr">
+          <p class="text-lg font-semibold text-pr md:text-xl md:font-bold">
             Aid for Injured in the Quota Movement
           </p>
-          <div class="flex flex-col gap-6">
-            <p class="text-base font-light text-second">
+          <div class="flex flex-col gap-3 md:gap-6">
+            <p class="text-sm font-light text-second md:text-base">
               The recent Quota movement has resulted in numerous injuries and
               significant hardship for many individuals. Your support is crucial
               in providing medical assistance, rehabilitation, and necessary
@@ -249,7 +255,7 @@
             />
           </div>
           <button
-            class="btn btn-block bg-btn1 text-xl font-semibold text-pr"
+            class="btn btn-block bg-btn1 text-lg font-medium text-pr md:text-xl md:font-semibold"
             id="donateQuota"
           >
             Donate Now
@@ -259,11 +265,14 @@
     </main>
 
     <!-- History page  -->
-    <section id="historyPage" class="mx-auto mt-8 hidden max-w-[1140px]">
+    <section
+      id="historyPage"
+      class="mx-auto mt-8 hidden max-w-[1140px] px-5 lg:px-0"
+    >
       <ul class="flex w-full flex-col gap-6" id="listOfHistory"></ul>
     </section>
 
-    <footer class="absolute bottom-0 h-36 w-full bg-[#F9F7F3]"></footer>
+    <footer class="absolute bottom-0 h-20 w-full bg-[#F9F7F3] md:h-36"></footer>
     <!-- Javascript files  -->
     <script src="./features.js"></script>
     <script src="./index.js"></script>
